@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "colab-shim"
+version = "0.1.0"
+description = "로컬 환경에서 google.colab API를 흉내 내는 대체 모듈"
+requires-python = ">=3.8"
+
+[tool.setuptools.packages.find]
+include = ["google.colab*"]
+namespaces = true

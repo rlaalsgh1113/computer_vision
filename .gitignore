@@ -1,0 +1,18 @@
+# 1) 일단 모든 파일 무시
+*
+
+# 2) 폴더 안으로는 들어가 검사하도록 허용
+!*/
+
+# 3) ipynb 파일과 .gitignore 자체는 허용
+!*.ipynb
+!.gitignore
+!/requirements.txt
+
+# 4) requirements.txt가 참조하는 colab_shim 소스 허용
+!/tools/colab_shim/pyproject.toml
+!/tools/colab_shim/google/**/*.py
+
+# 5) 가상환경, 주피터 자동 백업 폴더는 다시 무시
+.venv/
+.ipynb_checkpoints/
